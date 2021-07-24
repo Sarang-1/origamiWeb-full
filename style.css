@@ -11,7 +11,7 @@
   padding: 10px;
 }
 body{
-    background-color: whitesmoke;
+    background-color: #e9e7e7c4;
     padding-bottom: 20px;
 }
 .menu{
@@ -31,8 +31,8 @@ a{
 .grid{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
     
+    overflow: hidden;
 }
 
 .grid img{
@@ -40,23 +40,32 @@ a{
     border-radius: 50px;
 }
 
-.grid img:hover {
+.item:hover img{
     -webkit-transition: 0.2s;
     transition: 0.5s;
-    background: rgb(135, 212, 222);
-    box-shadow: 0 0 0 2em rgba(240, 61, 210, 0.9);
-    
-    cursor: alias;
+    background: rgba(245,245,245,1);
+    transform: scale(1.1);
+}
+
+.grid:hover  .item:not(:hover) {
+    -webkit-transition: 0.6s;
+    transition: 0.6s;
+    filter: blur(5px);
+}
+.item:hover{
+    -webkit-transition: 0.6s;
+    transition: 0.6s;
+    box-shadow: 0px 2px 30px rgba(0,0,0,0.5);
 }
 
 .item{
-    
     width: 310px;
     border-radius: 20px;
-    background-color: white;
+    background-color: #ffffff;
     font-family: fantasy;
     margin-top: 30px;
     padding: 20px;
+    margin: 10px;
 }
 
 .bodyimg{
@@ -72,9 +81,9 @@ a{
     background-size: cover;
 }
 
-.bodyimg p:hover{
+.menu a:hover{
     -webkit-transition: 0.5s;
-    transition: 0.5s;
-    color: rgb(61, 174, 240);
+    transition: 0.3s;
+    font-size: 25px;
 }
 
